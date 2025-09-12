@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" />
+        <meta og:title content="Random Guess Game">
+        <meta og:description content="A simple and fun random guessing Game to kill boredom">
+        <meta og:author content="Scybud">
+        <title>Random Guess Game</title>
+    </head>
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+            background-color: lightblue;
+        }
+        input {
+            width: 200px;
+            height: 30px;
+            border: 5px solid lightgreen;
+            margin: 15px;
+        }
+        #input {
+            padding: 100px auto;
+            margin: 40vh auto;
+            text-align: center;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+        }
+        input:focus {
+            border:  red solid 2px;
+            outline: none;
+        }
+        button {
+            background-color: green;
+            color: white;
+            font-size: large;
+            margin: 15px;
+            width: 110px;
+            height: 50px;
+        }
+        button:hover {
+            background-color: lightgreen;
+            color: black;
+            cursor: pointer;
+            width:  125px;
+            height: 55px;
+        }
+    </style>
+    <body>
+        <div id="input">
+            <h1>Random Number Game</h1>
+                <p>Guess the number</p>
+                <label for="userInput"> Input your lucky number(1-10):
+                       <input type="number" id="userInput" required min="1" max="10">
+                </label>
+                <button type="button" onclick="check()">Check</button>
+        </div>
+        <script>
+            const min = 1;
+const max = 10;
+let randomNum = Math.floor(Math.random() * (max - min)) + min;
+
+window.check = function () {
+    let userInput = parseInt(document.getElementById("userInput").value);
+    if (isNaN(userInput)) {
+         alert("Please enter a Number");
+    }
+    else if (userInput < 1 || userInput > 10) {
+        alert("Your number must be between 1 and 10");
+    }
+   else if (userInput === randomNum) {
+    alert("Correct! You guessed right!");
+} 
+else {
+    alert(`You are wrong. The number was ${randomNum}`);
+}
+randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
+};
+        </script>
+    </body>
+</html>
