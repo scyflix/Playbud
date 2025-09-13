@@ -20,7 +20,7 @@
         font-size: large;
     }
     main {
-        margin: 200px auto;
+        margin: 80px auto;
         border-radius: 15px;
         background-color: lightblue;
         height: 300px;
@@ -85,10 +85,14 @@
     }
     #popupcontent {
         background-color: lightblue;
-        max-width: 400px;
+        max-width: 350px;
         border-radius: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.0);
-        padding: 20px;
+        padding: 10px;
+    }
+    #closepopup {
+        padding: 2px;
+        margin: 2px 120px;
     }
     footer {
         text-align: center;
@@ -101,18 +105,23 @@
     <div id="popup">
         <div id="popupcontent">
             <h1>Welcome to Inver!</h1>
-            <h2>Describe:</h2>
+            <h2>Description:</h2>
             <p>Inver is a game that allows people meeting for the first time to initiate a conversation and get them to know more about each other.</p>
             <h3>How to play:</h3>
             <ul>
                 <li>There are two players in this game.</li>
                 <li>Player 1 starts by clicking on <b>Player 1</b> button.</li>
                 <li>A question will be displayed on the screen and <b>player 1</b> will read it out to ask player2.</li>
-                <li><b>player 2 will repeat the same process as well.</b></li>
+                <li><b>player 2 </b> repeat the same process as well.</li>
                 <li>players will switch turns to ask questions until they feel confortable with each other.</li>
             </ul>
-            <button onclick="closepopup()">Close</button>
+            <button id="closepopup" onclick="closepopup()">Close</button>
         </div>
+    </div>
+    <div style="padding-top: 50px; text-align: center; border: 2px solid green; border-radius: 15px;"> 
+        <a href="index.html" style="font-size: larger; border: 3px solid green; color: white; background-color: rgb(0, 161, 161); text-decoration: none;">Home</a>
+        <h1>Welcome To Inver!</h1>
+        <p>Start the game by clicking a button.</p>
     </div>
     <main>
         <button onclick="shuffle()" id="player1">Player 1</button>
