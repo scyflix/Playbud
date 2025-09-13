@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta og:title content="Introductory Question Game">
+    <meta name="description" content="Inver is a game that allows people meeting for the first time to iniciate a convertion and get them to know more about each other.">
+    <meta name="keywords" content="introductory question, first meeting, icebreaker game">
+    <meta name="author" content="Scybud">
+    <title>Inver | live a social life</title>
+</head>
+<style>
+    body {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        background-color: lightskyblue;
+        height: 50vh;
+    }
+    main {
+        margin: 200px auto;
+        border-radius: 15px;
+        background-color: lightblue;
+        height: 300px;
+        justify-content: center;
+        align-items: center;
+       text-align: center;
+    }
+    button {
+        background-color: greenyellow;
+        font-size: large;
+        margin: 75px 50px 16px 50px;
+        width: 100px;
+        height: 40px;
+    }
+    button:hover {
+        background-color: lightgreen;
+        width: 120px;
+        height: 50px;
+        font-size: larger;
+    }
+    #player2 {
+        margin-top: 20px;
+    }
+      #popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000; 
+     
+    }
+    #popupcontent {
+        background-color: lightblue;
+        max-width: 400px;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.0);
+        padding: 20px;
+    }
+</style>
+<body>
+    <div id="popup">
+        <div id="popupcontent">
+            <h1>Welcome to Inver!</h1>
+            <h2>Describe:</h2>
+            <p>Inver is a game that allows people meeting for the first time to iniciate a convertion and get them to know more about each other.</p>
+            <h3>How to play:</h3>
+            <ul>
+                <li>There are two players in this game.</li>
+                <li>Player 1 starts by clicking on <b>Player 1</b> button.</li>
+                <li>A question will be displayed on the screen and <b>player 1</b> will read it out to ask player2.</li>
+                <li><b>player 2 will repeat the same process as well.</b></li>
+                <li>players will switch turns to ask questions until they feel confortable with each other.</li>
+            </ul>
+            <button onclick="closepopup()">Close</button>
+        </div>
+    </div>
+    <main>
+       <button onclick="shuffle()">Player 1</button>
+       <h3 id="question"></h3>
+       <button onclick="shuffle()" id="player2">Player 2</button>
+    </main>
+    <script>
+        const question1 = "What is your favorite time of the year and why?";
+        const question2 = "Do you work out?";
+        const question3 = "Describe what your favorite food taste like?";
+        const question4 = "If you had the chance, would you take a trip to outer space?";
+        const question5 = "Do you play any sport?";
+        const question6 = "What are the hobbies you never found time for thus far?";
+        const question7 = "If you could magically learn one language, which one would it be?";
+        const question8 = "Would you like to own a business someday?";
+        const question9 = "What is that one thing you`ve always wanted to try but couldn`t for some reasons?";
+        const question10 = "What`s that movie that everyone seems to love which is just whatever for you?";
+        const question11= "What`s your drink of choice?";
+        const question12= "WHat made you the happiest last week?";
+        const question13= "What`s the silliest fashion trend you`ve tried?";
+        const question14= "What`s the best concert you`ve ever attended?";
+        const question15= "What song alway got you dancing?";
+        const question16= "Do you like board games or video games more?";
+        const question17= "What`s your favorite holiday tradition?";
+        const question18= "WHat`s your favorite type of dessert?";
+        const question19= "what`s the weirdest food you`ve ever tried?";
+        const question20= "What`s the funniest prank you`ve ever pulled?";
+
+        function closepopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+        window.shuffle = function() {
+            let random = Math.floor(Math.random() * 20) +1;
+            if (random === 1) {
+                document.getElementById("question").innerText = question1;
+            }
+            if (random === 2) {
+                document.getElementById("question").innerText = question12;
+            }
+            if (random === 3) {
+                document.getElementById("question").innerText = question3;
+            }
+            if (random === 4) {
+                document.getElementById("question").innerText = question4;
+            }
+            if (random === 5) {
+                document.getElementById("question").innerText = question5;
+            }
+            if (random === 6) {
+                document.getElementById("question").innerText = question6;
+            }
+            if (random === 7) {
+                document.getElementById("question").innerText = question7;
+            }
+            if (random === 8) {
+                document.getElementById("question").innerText = question8;
+            }
+            if (random === 9) {
+                document.getElementById("question").innerText = question9;
+            }
+            if (random === 10) {
+                document.getElementById("question").innerText = question10;
+            }
+            if (random === 11) {
+                document.getElementById("question").innerText = question11;
+            }
+            if (random === 12) {
+                document.getElementById("question").innerText = question12;
+            }
+            if (random === 13) {
+                document.getElementById("question").innerText = question13;
+            }
+            if (random === 14) {
+                document.getElementById("question").innerText = question14;
+            }
+            if (random === 15) {
+                document.getElementById("question").innerText = question15;
+            }
+            if (random === 16) {
+                document.getElementById("question").innerText = question16;
+            }
+            if (random === 17) {
+                document.getElementById("question").innerText = question17;
+            }
+            if (random === 18) {
+                document.getElementById("question").innerText = question18;
+            }
+            if (random === 19) {
+                document.getElementById("question").innerText = question19;
+            }
+            if (random === 20) {
+                document.getElementById("question").innerText = question20;
+            }
+        }
+    </script>
+</body>
+</html>
