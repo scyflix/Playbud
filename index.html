@@ -50,14 +50,33 @@
         color: darkgreen;
         transform: scale(1.1);
     }
+    #gameLink {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        box-shadow: rgb(31, 31, 31) 0 0 10px 1px;
+        border-radius: 10px; 
+    }
+    header {
+        background-color: rgb(179, 255, 179);
+        width: 99%;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+    }
 </style>
 <body>
-    <h1>Welcome to Playbud</h1>
-    <p>Discover and play exciting games online.</p>
+    <header>
+        <h1>Welcome to Playbud</h1>
+        <p>Discover and play exciting games online.</p>
+    </header>
     <h2>Available Games:</h2>
     <nav>
-        <a href="inver.html"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1757779147/ChatGPT_Image_Sep_13_2025_05_57_35_PM_h2x2qj.png" alt="inver logo"></a> 
-        <a href="randomGuessGame.html"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1757779687/ChatGPT_Image_Sep_13_2025_06_07_52_PM_gbxzei.png" alt="inver logo"></a>
+        <div id="gameLink">
+            <a href="inver.html"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1757779147/ChatGPT_Image_Sep_13_2025_05_57_35_PM_h2x2qj.png" alt="inver logo"></a> 
+            <a href="randomGuessGame.html"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1757779687/ChatGPT_Image_Sep_13_2025_06_07_52_PM_gbxzei.png" alt="inver logo"></a>
+        </div>
     </nav>
 </body>
 </html>
