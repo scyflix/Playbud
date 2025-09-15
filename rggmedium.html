@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" />
+        <meta og:title content="Random Guess Game">
+        <meta og:description content="A simple and fun random guessing Game to kill boredom">
+        <meta og:author content="Scybud">
+        <title>Random Guess Game</title>
+    </head>
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+            background-color: lightblue;
+        }
+        input {
+            width: 200px;
+            height: 30px;
+            box-shadow: 0 0 15px 2px green;
+            margin: 15px;
+        }
+        #input {
+            padding: 100px auto;
+            margin: 40px auto;
+            text-align: center;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+        }
+        input:focus {
+            border:  red solid 2px;
+            outline: none;
+            transform: scale(1.05);
+        }
+        button {
+            background-color: green;
+            color: white;
+            font-size: large;
+            margin: 15px;
+            width: 110px;
+            height: 50px;
+        }
+        button:hover {
+            background-color: lightgreen;
+            color: black;
+            cursor: pointer;
+            width:  125px;
+            height: 55px;
+        }
+           a {
+            width: 150px;
+            text-align: center;
+            height: 30px;
+            margin: 20px 0 0 10px;
+            display: inline-block;
+            background-color: lightgreen;
+            border-radius: 15px;
+            box-shadow: 0 0 15px 3px green;
+              text-decoration: none;
+              color: black;
+              justify-content: center;
+              align-items: center;
+        }
+        a:hover {
+            background-color: green;
+            color: white;
+        }
+        main {
+            border: 3px solid green;
+            margin-top: 10px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px 2px green;
+        }
+    </style>
+    <body>
+        <div style="padding-top: 50px; text-align: center; border: 2px solid green; border-radius: 15px;"> 
+        <a href="index.html" style="font-size: larger; border: 3px solid green; color: white; background-color: rgb(0, 161, 161); text-decoration: none;">Home</a>
+        <h1>Welcome To RGG!</h1>
+        <p>Start the game by entering a number.</p>
+    </div>
+        <main>
+             <section>
+             <section>
+                <label for="difficulty">Choose difficulty level:</label>
+                    <a href="randomGuessGame.html">Easy</a>
+                    <a href="rggmedium.html">Medium</a>
+                    <a href="rgghard.html">Hard</a>
+            </section>
+            </section>
+            <div id="input">
+                <h1>Random Number Game</h1>
+                    <h2>Medium Mode</h2>
+                    <label for="userInput"> Input your lucky number(1-50):
+                           <input type="number" id="userInput" required>
+                    </label>
+                    <button type="button" onclick="check()">Check</button>
+            </div>
+        </main>
+          <footer>
+        <h3>Other Games:</h3>
+        <a href="inver.html">Inver - Introductory Questions</a>
+        <br>
+        &copy; Scybud 2025
+    </footer>
+        <script>
+            
+let randomNum = Math.floor(Math.random() * 50) + 1;
+
+window.check = function () {
+    let userInput = parseInt(document.getElementById("userInput").value);
+    if (isNaN(userInput)) {
+         alert("Please enter a Number");
+    }
+    else if (userInput < 1 || userInput > 50) {
+        alert("Your number must be between 1 and 50");
+    }
+   else if (userInput === randomNum) {
+    alert("Correct! You guessed right!");
+} 
+else {
+    alert(`You are wrong. The number was ${randomNum}`);
+}
+randomNum = Math.floor(Math.random() * 50) + 1;
+};
+        </script>
+    </body>
+</html>
