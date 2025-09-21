@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta og:title content="Introductory Question Game">
-    <meta name="description" content="Inver is a game that allows people meeting for the first time to iniciate a convertion and get them to know more about each other.">
-    <meta name="keywords" content="introductory question, first meeting, icebreaker game">
+    <meta name="description" content="Inver ist ein Spiel, das es Menschen erlaubt, sich beim ersten Treffen zu unterhalten und mehr über einander zu erfahren.">
+    <meta name="keywords" content="Einleitende Frage, erstes Treffen, Eisbrecher-Spiel">
     <meta name="author" content="Scybud">
-    <title>Inver | live a social life</title>
+    <title>Inver | Ein soziales Leben führen</title>
 </head>
 <style>
     body {
@@ -100,7 +100,7 @@
         height: 50px;
         margin-bottom: 20px;
     }
-      a {
+    a {
        
        font-size: larger; 
        border: 3px solid green; 
@@ -113,61 +113,61 @@
     }
 </style>
 <body>
-    <div id="popup" style="display: none;">
+    <div id="popup">
         <div id="popupcontent">
-            <h1>Welcome to Inver!</h1>
-            <h2>Description:</h2>
-            <p>Inver is a game that allows people meeting for the first time to initiate a conversation and get them to know more about each other.</p>
-            <h3>How to play:</h3>
+            <h1>Willkommen zu Inver!</h1>
+            <h2>Beschreibung:</h2>
+            <p>Inver ist ein Spiel, das es Menschen erlaubt, sich beim ersten Treffen zu unterhalten und mehr über einander zu erfahren.</p>
+            <h3>Wie man spielt:</h3>
             <ul>
-                <li>There are two players in this game.</li>
-                <li>Player 1 starts by clicking on <b>Player 1</b> button.</li>
-                <li>A question will be displayed on the screen and <b>player 1</b> will read it out to ask player2.</li>
-                <li><b>player 2 </b> repeat the same process as well.</li>
-                <li>players will switch turns to ask questions until they feel confortable with each other.</li>
+          <li>Es gibt zwei Spieler in diesem Spiel.</li>
+          <li>Spieler 1 beginnt, indem er auf die Schaltfläche <b>Spieler 1</b> klickt.</li>
+          <li>Eine Frage wird auf dem Bildschirm angezeigt und <b>Spieler 1</b> wird sie vorlesen, um Spieler 2 zu fragen.</li>
+          <li><b>Spieler 2</b> wiederholt den gleichen Prozess.</li>
+          <li>Die Spieler wechseln sich ab, um Fragen zu stellen, bis sie sich wohlfühlen.</li>
             </ul>
-            <button id="closepopup" onclick="closepopup()">Close</button>
+            <button id="closepopup" onclick="closepopup()">Schließen</button>
         </div>
 
     </div>
     <div style="padding-top: 50px; text-align: center; border: 2px solid green; border-radius: 15px;"> 
-        <a href="inver-de.html">DE</a>
+        <a href="inver.html">EN</a>
         <a href="index.html" style="font-size: larger; border: 3px solid green; color: white; background-color: rgb(0, 161, 161); text-decoration: none;">Home</a>
-        <h1>Welcome To Inver!</h1>
-        <p>Start the game by clicking a button.</p>
+        <h1>Willkommen zu Inver!</h1>
+       <p>Beginne das Spiel, indem du auf einen Button klickst.</p>
     </div>
     <main>
-        <button onclick="shuffle()" id="player1">Player 1</button>
+        <button onclick="shuffle()" id="player1">Spieler 1</button>
         <h3 id="question"></h3>
-        <button onclick="shuffle()" id="player2">Player 2</button>
+        <button onclick="shuffle()" id="player2">Spieler 2</button>
     </main>
     <footer>
-        <h3>Other Games:</h3>
-        <a href="randomGuessGame.html">Random Guessing Game(RGG)</a>
+        <h3>Andere Spiele:</h3>
+        <a href="randomGuessGame.html">Zufälliges Ratenspiel (ZRG)</a>
         <br>
         &copy; Scybud 2025
     </footer>
     <script>
-        const question1 = "What is your favorite time of the year and why?";
-        const question2 = "Do you work out?";
-        const question3 = "Describe what your favorite food taste like?";
-        const question4 = "If you had the chance, would you take a trip to outer space?";
-        const question5 = "Do you play any sport?";
-        const question6 = "What are the hobbies you never found time for thus far?";
-        const question7 = "If you could magically learn one language, which one would it be?";
-        const question8 = "Would you like to own a business someday?";
-        const question9 = "What is that one thing you`ve always wanted to try but couldn`t for some reasons?";
-        const question10 = "What`s that movie that everyone seems to love which is just whatever for you?";
-        const question11= "What`s your drink of choice?";
-        const question12= "What made you the happiest last week?";
-        const question13= "What`s the silliest fashion trend you`ve tried?";
-        const question14= "What`s the best concert you`ve ever attended?";
-        const question15= "What song alway got you dancing?";
-        const question16= "Do you like board games or video games more?";
-        const question17= "What`s your favorite holiday tradition?";
-        const question18= "WHat`s your favorite type of dessert?";
-        const question19= "what`s the weirdest food you`ve ever tried?";
-        const question20= "What`s the funniest prank you`ve ever pulled?";
+       const question1 = "Was ist deine Lieblingsjahreszeit und warum?"; 
+       const question2 = "Machst du Sport?"; 
+       const question3 = "Beschreibe, wie dein Lieblingsessen schmeckt."; 
+       const question4 = "Wenn du die Chance hättest, würdest du eine Reise ins Weltall machen?"; 
+       const question5 = "Spielst du irgendeinen Sport?"; 
+       const question6 = "Welche Hobbys hast du bisher nie Zeit gefunden?"; 
+       const question7 = "Wenn du magisch eine Sprache lernen könntest, welche wäre es?"; 
+       const question8 = "Möchtest du eines Tages ein eigenes Unternehmen besitzen?"; 
+       const question9 = "Was ist das eine Ding, das du immer ausprobieren wolltest, aber aus irgendeinem Grund nicht konntest?"; 
+       const question10 = "Was ist der Film, den anscheinend jeder liebt, der für dich aber einfach nur egal ist?"; 
+       const question11 = "Was ist dein Lieblingsgetränk?"; 
+       const question12 = "Was hat dich letzte Woche am glücklichsten gemacht?"; 
+       const question13 = "Was ist der albernste Modetrend, den du ausprobiert hast?"; 
+       const question14 = "Was ist das beste Konzert, das du je besucht hast?";
+       const question15= "Welches Lied bringt dich immer zum Tanzen?";
+       const question16= "Magst du Gesellschaftsspiele oder Videospiele lieber?";
+       const question17= "Was ist deine Lieblingsurlaubs Tradition?";
+       const question18= "Was ist dein Lieblingsdessert?";
+       const question19= "Was ist das seltsamste Essen, das du jemals probiert hast?";
+       const question20= "Was ist der lustigste Scherz, den du jemals gemacht hast?";
 
         function closepopup() {
             document.getElementById("popup").style.display = "none";
