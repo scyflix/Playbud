@@ -19,15 +19,19 @@
         width: 300px;
         height: 500px;
       }
-
-      .topCardContainer {
+      .cards {
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 0 5px;
+        flex-direction: column;
+        width: 300px;
+        height: 500px;
+      }
+      .topCardContainer {
+        align-items: center;
+        padding: 50px 5px;
         width: 50vw;
-        height: 40vh;
+        height: 300px;
         max-width: 400px;
         max-height: 300px;
         border: none;
@@ -38,17 +42,17 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         cursor: pointer;
         z-index: 10px;
-        top: 290px;
+        top: 380px;
         transition: all 0.9s ease;
       }
       .topCardContainer:focus {
-        transform: translateY(-290px);
+        transform: translateY(-360px);
       }
       .buttomCardContainer {
         background-color: #ff4d6d;
         color: whitesmoke;
         width: 50vw;
-        height: auto;
+        height: 290px;
         max-width: 400px;
         max-height: 300px;
         padding: 5px;
@@ -69,11 +73,13 @@
         .topCardContainer {
           width: 60vw;
           margin: 0 auto;
+          min-height: 350px;
         }
 
         .buttomCardContainer {
           width: 60vw;
           margin: 0 auto;
+          min-height: 350px;
         }
         hr {
           border-radius: 50px;
@@ -85,20 +91,22 @@
   </head>
   <body>
     <main>
-      <div tabindex="0" class="topCardContainer">
-        <hr />
-        <h1>It`s Your Day😊!!!</h1>
-        <hr />
-        <p>Click To Open This Card💌</p>
-      </div>
-      <div class="buttomCardContainer">
-        <h2>Happy Birthday To You</h2>
-        <p>
-          Wishing you a day filled with joy, happiness, laughter and everything
-          you deserve
-        </p>
-        <p>Stay happy and stay blessed</p>
-        <p>Wishing you a joy filled year ahead💗💓!</p>
+      <div class="cards">
+        <div tabindex="0" class="topCardContainer">
+          <hr />
+          <h1>It`s Your Day😊!!!</h1>
+          <hr />
+          <p>Click To Open This Card💌</p>
+        </div>
+        <div class="buttomCardContainer">
+          <h2>Happy Birthday To You</h2>
+          <p>
+            Wishing you a day filled with joy, happiness, laughter and
+            everything you deserve
+          </p>
+          <p>Stay happy and stay blessed</p>
+          <p>Wishing you a joy filled year ahead💗💓!</p>
+        </div>
       </div>
     </main>
   </body>
