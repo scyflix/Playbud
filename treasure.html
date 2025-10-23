@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta og:title content="Introductory Question Game" />
+    <meta name="description" content="Pirate Treasure." />
+    <meta
+      name="keywords"
+      content="guessing game, scybud games, treasure game"
+    />
+    <meta name="author" content="Scybud" />
+    <title>Inver | Ein soziales Leben führen</title>
+  </head>
+  <style>
+    body {
+      font-family: " Arial", sans-serif;
+      background-color: #833939;
+      font-size: large;
+    }
+    main {
+      margin: 80px auto;
+      border-radius: 15px;
+      background-color: #a58052;
+      min-height: 90vh;
+      width: 80vw;
+      text-align: center;
+      padding-top: 20px;
+    }
+    button {
+      background-color: lightgreen;
+      color: black;
+      font-size: large;
+      margin: 20px auto;
+      width: 100px;
+      height: 40px;
+      border-radius: 15px;
+      transition: all 0.5s ease-in;
+    }
+    button:hover {
+      background-color: white;
+      font-size: larger;
+    }
+    input {
+      height: 30px;
+      border-radius: 10px;
+    }
+    footer {
+      text-align: center;
+      padding-bottom: 20px;
+      height: 50px;
+      margin-bottom: 20px;
+    }
+    #treasureBoxContainer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px 100px;
+      margin: 0 20px;
+      padding-bottom: 15px;
+    }
+    .treasureBox {
+      padding: 40px 0;
+      background-color: #833939;
+      color: white;
+      width: 100px;
+      max-height: 100px;
+      text-align: center;
+      border-radius: 10px;
+      animation: breath 01s ease-in-out infinite;
+    }
+    .treasureBox:hover {
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+    @media (max-width: 600px) {
+      main {
+        width: 95vw;
+        margin: 10px auto;
+      }
+      #treasureBoxContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px;
+        width: 100%;
+        margin: 0 10px;
+      }
+      .treasureBox {
+        padding: 40px 0;
+        max-height: 100px;
+        margin: 10px auto;
+      }
+    }
+    @keyframes breath {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+  <body>
+    <main>
+      <input type="number" placeholder="input a box number" id="userInput" />
+      <button onclick="guess()">Guess</button>
+      <p id="message">Input a number between 1 and 6</p>
+      <section id="treasureBoxContainer">
+        <div class="treasureBox" id="box1">?</div>
+        <div class="treasureBox" id="box2">?</div>
+        <div class="treasureBox" id="box3">?</div>
+        <div class="treasureBox" id="box4">?</div>
+        <div class="treasureBox" id="box5">?</div>
+        <div class="treasureBox" id="box6">?</div>
+      </section>
+    </main>
+    <footer>&copy; Scybud 2025</footer>
+    <script>
+      function guess() {
+        const userInput = parseInt(document.getElementById("userInput").value);
+        const message = document.getElementById("message");
+        const box1 = document.getElementById("box1");
+        const box2 = document.getElementById("box2");
+        const box3 = document.getElementById("box3");
+        const box4 = document.getElementById("box4");
+        const box5 = document.getElementById("box5");
+        const box6 = document.getElementById("box6");
+
+        let treasureGuess = Math.floor(Math.random() * 6) + 1;
+        if (userInput === "") {
+          message.innerText = "Please enter a value";
+        } else if (userInput < 1 || userInput > 6) {
+          message.innerText = "Please enter a mumber between 1 and 6";
+        } else if (treasureGuess === userInput && userInput === 1) {
+          message.innerText = "";
+          box1.innerText = "You Won!🪙🏴‍☠️";
+        } else if (userInput === 2 && userInput === treasureGuess) {
+          message.innerText = "";
+          box2.innerText = "You Won!🪙🏴‍☠️";
+        } else if (userInput === 3 && userInput === treasureGuess) {
+          message.innerText = "";
+          box3.innerText = "You Won!🪙🏴‍☠️";
+        } else if (userInput === 4 && userInput === treasureGuess) {
+          message.innerText = "";
+          box4.innerText = "You Won!🪙🏴‍☠️";
+        } else if (userInput === 5 && userInput === treasureGuess) {
+          message.innerText = "";
+          box5.innerText = "You Won!🪙🏴‍☠️";
+        } else if (userInput === 6 && userInput === treasureGuess) {
+          message.innerText = "";
+          box6.innerText = "You Won!🪙🏴‍☠️";
+        } else {
+          message.innerText = `No, the treasure was in box ${treasureGuess}`;
+        }
+      }
+    </script>
+  </body>
+</html>

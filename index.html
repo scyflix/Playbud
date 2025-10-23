@@ -1,82 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Playbud Game Porter</title>
-    <meta name="description" content="Playbud - Discover and play exciting games online.">
-    <meta name="keywords" content="games, online games, Scybud, Playbud, fun, play, entertainment">
-    <meta name="author" content="Playbud">
-    <meta property="og:title" content="Playbud Game Portal">
-    <meta property="og:description" content="Discover and play exciting games online at Playbud Game Portal.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://scyflix.github.io/Playbud/">
-    <meta property="og:image" content="https://res.cloudinary.com/dc1bmavl5/image/upload/v1757763602/ChatGPT_Image_Sep_13_2025_01_23_30_PM_gqilng.png">
-    <meta name="twitter:title" content="Playbud Game Portal">
-    <meta name="twitter:description" content="Discover and play exciting games online at Playbud Game Portal.">
-    <meta name="twitter:image" content="https://res.cloudinary.com/dc1bmavl5/image/upload/v1757763602/ChatGPT_Image_Sep_13_2025_01_23_30_PM_gqilng.png">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="manifest" href="site.webmanifest">
-</head>
-<style>
+    <meta
+      name="description"
+      content="Playbud - Discover and play exciting games online."
+    />
+    <meta
+      name="keywords"
+      content="games, online games, Scybud, Playbud, fun, play, entertainment"
+    />
+    <meta name="author" content="Playbud" />
+    <meta property="og:title" content="Playbud Game Portal" />
+    <meta
+      property="og:description"
+      content="Discover and play exciting games online at Playbud Game Portal."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://scyflix.github.io/Playbud/" />
+    <meta
+      property="og:image"
+      content="https://res.cloudinary.com/dc1bmavl5/image/upload/v1757763602/ChatGPT_Image_Sep_13_2025_01_23_30_PM_gqilng.png"
+    />
+    <meta name="twitter:title" content="Playbud Game Portal" />
+    <meta
+      name="twitter:description"
+      content="Discover and play exciting games online at Playbud Game Portal."
+    />
+    <meta
+      name="twitter:image"
+      content="https://res.cloudinary.com/dc1bmavl5/image/upload/v1757763602/ChatGPT_Image_Sep_13_2025_01_23_30_PM_gqilng.png"
+    />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+  </head>
+  <style>
     body {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        text-align: center;
-        font-size: large;
-        font-weight: bold;
-        background: radial-gradient(circle at center, lightblue, lightgreen);
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      text-align: center;
+      font-size: large;
+      font-weight: bold;
+      background: radial-gradient(circle at center, lightblue, lightgreen);
     }
     img {
-        border: 4px solid green;
-        border-radius: 15px;
-        display: inline-block;
-        width: 200px;
+      border: 4px solid green;
+      border-radius: 15px;
+      display: inline-block;
+      width: 200px;
     }
     @media (max-width: 400px) {
-        img {
-            width: 150px;
-        }
+      img {
+        width: 150px;
+      }
     }
     a {
-        text-decoration: none;
-        color: green;
-        font-size: 24px;
-        margin: 5px;
+      text-decoration: none;
+      color: green;
+      font-size: 24px;
+      margin: 5px;
     }
     img:hover {
-        color: darkgreen;
-        transform: scale(1.1);
+      color: darkgreen;
+      transform: scale(1.1);
     }
     #gameLink {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        flex-wrap: wrap;
-        box-shadow: rgb(31, 31, 31) 0 0 10px 1px;
-        border-radius: 10px; 
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      box-shadow: rgb(31, 31, 31) 0 0 10px 1px;
+      border-radius: 10px;
     }
     header {
-        background-color: rgb(179, 255, 179);
-        width: 99%;
-        justify-content: center;
-        align-items: center;
-        border-radius: 30px;
+      background-color: rgb(179, 255, 179);
+      width: 99%;
+      justify-content: center;
+      align-items: center;
+      border-radius: 30px;
     }
-</style>
-<body>
+  </style>
+  <body>
     <header>
-        <h1>Welcome to Playbud</h1>
-        <p>Discover and play exciting games online.</p>
+      <h1>Welcome to Playbud</h1>
+      <p>Discover and play exciting games online.</p>
     </header>
     <h2>Available Games:</h2>
     <nav>
-        <div id="gameLink">
-            <a href="inver.html"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1757779147/ChatGPT_Image_Sep_13_2025_05_57_35_PM_h2x2qj.png" alt="inver logo"></a> 
-            <a href="randomGuessGame.html"><img src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1757779687/ChatGPT_Image_Sep_13_2025_06_07_52_PM_gbxzei.png" alt="inver logo"></a>
-        </div>
+      <div id="gameLink">
+        <a href="inver.html"
+          ><img
+            src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1757779147/ChatGPT_Image_Sep_13_2025_05_57_35_PM_h2x2qj.png"
+            alt="inver logo"
+        /></a>
+        <a href="randomGuessGame.html"
+          ><img
+            src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1757779687/ChatGPT_Image_Sep_13_2025_06_07_52_PM_gbxzei.png"
+            alt="inver logo"
+        /></a>
+        <a href="treasure.html"><img src="" alt=" Pirate Treasure Logo" /></a>
+      </div>
     </nav>
-</body>
+  </body>
 </html>
