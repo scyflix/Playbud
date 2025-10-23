@@ -105,55 +105,58 @@
   </style>
   <body>
     <main>
-      <input type="number" placeholder="input a box number" id="userInput" />
-      <button onclick="guess()">Guess</button>
+      <input
+        type="number"
+        placeholder="input a box number"
+        id="userInput"
+        required
+      />
+      <button id="guessbtn" type="button" onclick="guess()">Guess</button>
+      <button
+        id="reloadbtn"
+        onclick="location.reload()"
+        style="width: auto; display: none"
+      >
+        Reload to restart
+      </button>
       <p id="message">Input a number between 1 and 6</p>
       <section id="treasureBoxContainer">
-        <div class="treasureBox" id="box1">?</div>
-        <div class="treasureBox" id="box2">?</div>
-        <div class="treasureBox" id="box3">?</div>
-        <div class="treasureBox" id="box4">?</div>
-        <div class="treasureBox" id="box5">?</div>
-        <div class="treasureBox" id="box6">?</div>
+        <div class="treasureBox" id="box1">1</div>
+        <div class="treasureBox" id="box2">2</div>
+        <div class="treasureBox" id="box3">3</div>
+        <div class="treasureBox" id="box4">4</div>
+        <div class="treasureBox" id="box5">5</div>
+        <div class="treasureBox" id="box6">6</div>
       </section>
     </main>
     <footer>&copy; Scybud 2025</footer>
     <script>
       function guess() {
+        //get input and p element
         const userInput = parseInt(document.getElementById("userInput").value);
         const message = document.getElementById("message");
-        const box1 = document.getElementById("box1");
-        const box2 = document.getElementById("box2");
-        const box3 = document.getElementById("box3");
-        const box4 = document.getElementById("box4");
-        const box5 = document.getElementById("box5");
-        const box6 = document.getElementById("box6");
-
+        const reloadbtn = document.getElementById("reloadbtn");
+        const guessbtn = document.getElementById("guessbtn");
+        //Write game logic
+        guessbtn.style.display = "none";
+        reloadbtn.style.display = "block";
         let treasureGuess = Math.floor(Math.random() * 6) + 1;
-        if (userInput === "") {
+        if (isNaN(userInput)) {
+          message.style.color = "red";
           message.innerText = "Please enter a value";
         } else if (userInput < 1 || userInput > 6) {
-          message.innerText = "Please enter a mumber between 1 and 6";
-        } else if (treasureGuess === userInput && userInput === 1) {
+          message.style.color = "red";
+          message.innerText = "Please enter a number between 1 and 6";
+        } else if (treasureGuess === userInput) {
+          document.getElementById(`box${userInput}`).innerText = "You Won!🪙🏴‍☠️";
           message.innerText = "";
-          box1.innerText = "You Won!🪙🏴‍☠️";
-        } else if (userInput === 2 && userInput === treasureGuess) {
-          message.innerText = "";
-          box2.innerText = "You Won!🪙🏴‍☠️";
-        } else if (userInput === 3 && userInput === treasureGuess) {
-          message.innerText = "";
-          box3.innerText = "You Won!🪙🏴‍☠️";
-        } else if (userInput === 4 && userInput === treasureGuess) {
-          message.innerText = "";
-          box4.innerText = "You Won!🪙🏴‍☠️";
-        } else if (userInput === 5 && userInput === treasureGuess) {
-          message.innerText = "";
-          box5.innerText = "You Won!🪙🏴‍☠️";
-        } else if (userInput === 6 && userInput === treasureGuess) {
-          message.innerText = "";
-          box6.innerText = "You Won!🪙🏴‍☠️";
         } else {
+          const correctBox = document.getElementById(`box${treasureGuess}`);
+          correctBox.style.backgroundColor = "gold";
+          correctBox.style.color = "black";
+          message.style.color = "red";
           message.innerText = `No, the treasure was in box ${treasureGuess}`;
+          correctBox.innerText = "The treasure was here";
         }
       }
     </script>

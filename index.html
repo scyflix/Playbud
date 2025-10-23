@@ -52,6 +52,7 @@
       border-radius: 15px;
       display: inline-block;
       width: 200px;
+      transition: all 0.5s ease-in;
     }
     @media (max-width: 400px) {
       img {
@@ -83,6 +84,9 @@
       align-items: center;
       border-radius: 30px;
     }
+    #treasureHunt {
+      background-color: gold;
+    }
   </style>
   <body>
     <header>
@@ -102,7 +106,12 @@
             src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1757779687/ChatGPT_Image_Sep_13_2025_06_07_52_PM_gbxzei.png"
             alt="inver logo"
         /></a>
-        <a href="treasure.html"><img src="" alt=" Pirate Treasure Logo" /></a>
+        <a href="treasure.html"
+          ><img
+            id="treasureHunt"
+            src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1761237244/treasure-hunt_xayjti.svg"
+            alt=" Pirate Treasure Logo"
+        /></a>
       </div>
     </nav>
   </body>
